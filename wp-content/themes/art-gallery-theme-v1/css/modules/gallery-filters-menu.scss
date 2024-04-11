@@ -1,0 +1,36 @@
+// .gallery-filters-menu-overlay {
+//   position: absolute;
+//   right: 0;
+//   top: 0;
+//   bottom: 0;
+//   width: 75rem;
+//   background: white;
+//   z-index: 2;
+// }
+
+.gallery-filters-menu-overlay {
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 6;
+  position: fixed;
+  top: 72px;
+  // left: 0;
+  width: 320px;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.96);
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(1.09);
+  transition:
+    opacity 0.3s,
+    transform 0.3s,
+    visibility 0.3s;
+  box-sizing: border-box;
+
+  &--active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
